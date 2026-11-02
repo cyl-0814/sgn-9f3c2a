@@ -1,0 +1,14 @@
+{
+  "log": { "level": "warn" },
+  "inbounds": [
+    { "type": "tun", "tag": "tun-in", "address": ["172.19.0.1/30"], "auto_route": true, "strict_route": true }
+  ],
+  "outbounds": [
+    { "type": "vless", "tag": "SG-Reality", "server": "47.79.232.109", "server_port": 443,
+      "uuid": "c5686eef-e08f-481d-9627-d5173e7ac715", "flow": "xtls-rprx-vision",
+      "tls": { "enabled": true, "server_name": "www.cloudflare.com",
+               "utls": { "enabled": true, "fingerprint": "chrome" },
+               "reality": { "enabled": true, "public_key": "QBrjd368RNq96wSIGx7YOt9De6WFMT_ZCVO7Szwz3Wo", "short_id": "85cd4775" } } }
+  ],
+  "route": { "final": "SG-Reality", "auto_detect_interface": true }
+}

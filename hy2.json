@@ -1,0 +1,12 @@
+{
+  "log": { "level": "warn" },
+  "inbounds": [
+    { "type": "tun", "tag": "tun-in", "address": ["172.19.0.1/30"], "auto_route": true, "strict_route": true }
+  ],
+  "outbounds": [
+    { "type": "hysteria2", "tag": "SG-Hy2", "server": "47.79.232.109", "server_port": 443,
+      "password": "iltxe0cPyFRv5xQM",
+      "tls": { "enabled": true, "server_name": "www.bing.com", "insecure": true } }
+  ],
+  "route": { "final": "SG-Hy2", "auto_detect_interface": true }
+}
